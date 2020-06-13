@@ -277,9 +277,9 @@ doin?
 
 __mod_name__ = "Filters"
 
-FILTER_HANDLER = CommandHandler("filter", filters)
-STOP_HANDLER = CommandHandler("stop", stop_filter)
-LIST_HANDLER = DisableAbleCommandHandler("filters", list_handlers, admin_ok=True)
+FILTER_HANDLER = CommandHandler("f", filters)
+STOP_HANDLER = CommandHandler("s", stop_filter)
+LIST_HANDLER = DisableAbleCommandHandler("fs", list_handlers, admin_ok=True)
 CUST_FILTER_HANDLER = MessageHandler(CustomFilters.has_text, reply_filter)
 
 dispatcher.add_handler(FILTER_HANDLER)
